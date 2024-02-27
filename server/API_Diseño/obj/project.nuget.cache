@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LfM71HQo+qnofjGNAJAewCMRn0vfc5LLQEpNfEhToevc80WEaOATzFx1F5KdYSz4VwCEj1sqeuBgrqdGKagYKQ==",
+  "dgSpecHash": "R2WGU73bMSowUjzQvu0XgcT2J/tAsZiEEs3ZqQ5YYI0DBgpOrI5c2K/hLBTyXcMtUe4KIkLyw2FmeGGK3rI2FQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\API_Diseño\\API_Diseño.csproj",
+  "projectFilePath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\API_Diseño\\API_Diseño.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafae\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -22,6 +22,7 @@
     "C:\\Users\\rafae\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\7.0.0\\microsoft.entityframeworkcore.sqlite.7.0.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.0\\microsoft.entityframeworkcore.sqlite.core.7.0.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.0\\microsoft.entityframeworkcore.sqlserver.7.0.0.nupkg.sha512",
+    "C:\\Users\\rafae\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.16\\microsoft.entityframeworkcore.tools.7.0.16.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",

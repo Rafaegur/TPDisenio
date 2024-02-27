@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\API_Diseño\\API_Diseño.csproj": {}
+    "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\API_Diseño\\API_Diseño.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\API_Diseño\\API_Diseño.csproj": {
+    "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\API_Diseño\\API_Diseño.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\API_Diseño\\API_Diseño.csproj",
+        "projectUniqueName": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\API_Diseño\\API_Diseño.csproj",
         "projectName": "API_Diseño",
-        "projectPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\API_Diseño\\API_Diseño.csproj",
+        "projectPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\API_Diseño\\API_Diseño.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\API_Diseño\\obj\\",
+        "outputPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\API_Diseño\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\Data\\Data.csproj"
+              "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\Data\\Data.csproj"
               }
             }
           }
@@ -53,6 +53,12 @@
               "version": "[7.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
@@ -86,14 +92,14 @@
         }
       }
     },
-    "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\Data\\Data.csproj": {
+    "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\server\\Data\\obj\\",
+        "outputPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
