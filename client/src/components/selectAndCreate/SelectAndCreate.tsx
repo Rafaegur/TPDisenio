@@ -13,7 +13,7 @@ export const SelectAndCreate = ({
   onSelect: () => void;
 }) => {
   return (
-    <div className='flex gap-2 w-full'>
+    <div className='flex gap-2 w-full min-w-48'>
       <select onChange={onSelect} className='select w-full'>
         <option selected value={''}>
           {defaultOptionName}

@@ -8,7 +8,7 @@ import { SelectAndCreate } from '@/components/selectAndCreate/SelectAndCreate';
 export default function AltaLote() {
   return (
     <div className='flex w-full h-screen items-center justify-center'>
-      <div className='flex flex-col w-1/3 h-full items-center gap-2'>
+      <div className='flex flex-col xl:w-1/3 h-full items-center gap-2'>
         <h1 className='text-2xl w-full pt-12 font-bold'>Alta Lote</h1>
         <div className='divider bg-white h-[1px]'></div>
         <div className='flex gap-2 w-full'>
@@ -19,7 +19,7 @@ export default function AltaLote() {
             onSelect={() => {}}
           ></SelectAndCreate>
         </div>
-        <div className='flex gap-4 w-full items-center'>
+        <div className='flex gap-4 w-full items-center flex-col xl:flex-row'>
           <div className='flex gap-2 flex-col w-full'>
             <label>Obra social</label>
             <SelectAndCreate
@@ -29,11 +29,14 @@ export default function AltaLote() {
               onSelect={() => {}}
             ></SelectAndCreate>
           </div>
-          <div className='flex'>
+          <div className='flex w-full'>
             <div className='flex flex-col gap-2'>
               <label>Cantidad</label>
               <div className='flex gap-2'>
-                <input className='input w-48' type='number'></input>
+                <input
+                  className='input flex grow w-auto max-w-48'
+                  type='number'
+                ></input>
                 <button className='btn'>Agregar</button>
               </div>
             </div>
@@ -58,7 +61,7 @@ export default function AltaLote() {
                 <td>OSDE</td>
                 <td>5</td>
                 <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-error'>
+                  <button className='btn btn-sm btn-square btn-neutral'>
                     <Image src={closeSvg} width={12} alt='delete'></Image>
                   </button>
                 </td>
@@ -68,7 +71,7 @@ export default function AltaLote() {
                 <td>Swiss Medical</td>
                 <td>3</td>
                 <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-error'>
+                  <button className='btn btn-sm btn-square btn-neutral'>
                     <Image src={closeSvg} width={12} alt='delete'></Image>
                   </button>
                 </td>
@@ -78,7 +81,7 @@ export default function AltaLote() {
                 <td>Swiss Medical</td>
                 <td>3</td>
                 <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-error'>
+                  <button className='btn btn-sm btn-square btn-neutral'>
                     <Image src={closeSvg} width={12} alt='delete'></Image>
                   </button>
                 </td>
@@ -88,7 +91,7 @@ export default function AltaLote() {
                 <td>Swiss Medical</td>
                 <td>3</td>
                 <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-error'>
+                  <button className='btn btn-sm btn-square btn-neutral'>
                     <Image src={closeSvg} width={12} alt='delete'></Image>
                   </button>
                 </td>
@@ -98,7 +101,7 @@ export default function AltaLote() {
                 <td>Swiss Medical</td>
                 <td>3</td>
                 <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-error'>
+                  <button className='btn btn-sm btn-square btn-neutral'>
                     <Image src={closeSvg} width={12} alt='delete'></Image>
                   </button>
                 </td>
@@ -108,7 +111,7 @@ export default function AltaLote() {
                 <td>Swiss Medical</td>
                 <td>3</td>
                 <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-error'>
+                  <button className='btn btn-sm btn-square btn-neutral'>
                     <Image src={closeSvg} width={12} alt='delete'></Image>
                   </button>
                 </td>
@@ -118,7 +121,7 @@ export default function AltaLote() {
                 <td>Swiss Medical</td>
                 <td>3</td>
                 <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-error'>
+                  <button className='btn btn-sm btn-square btn-neutral'>
                     <Image src={closeSvg} width={12} alt='delete'></Image>
                   </button>
                 </td>
@@ -128,7 +131,7 @@ export default function AltaLote() {
                 <td>Swiss Medical</td>
                 <td>3</td>
                 <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-error'>
+                  <button className='btn btn-sm btn-square btn-neutral'>
                     <Image src={closeSvg} width={12} alt='delete'></Image>
                   </button>
                 </td>
