@@ -1,0 +1,7 @@
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\API_Diseño\obj\Debug\net7.0\API_Diseño.csproj.AssemblyReference.cache
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\API_Diseño\obj\Debug\net7.0\API_Diseño.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\API_Diseño\obj\Debug\net7.0\API_Diseño.AssemblyInfoInputs.cache
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\API_Diseño\obj\Debug\net7.0\API_Diseño.AssemblyInfo.cs
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\API_Diseño\obj\Debug\net7.0\API_Diseño.csproj.CoreCompileInputs.cache
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\API_Diseño\obj\Debug\net7.0\API_Diseño.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\API_Diseño\obj\Debug\net7.0\API_Diseño.sourcelink.json

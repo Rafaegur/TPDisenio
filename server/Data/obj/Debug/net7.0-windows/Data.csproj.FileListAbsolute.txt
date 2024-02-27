@@ -1,0 +1,15 @@
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\bin\Debug\net7.0-windows\Data.deps.json
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\bin\Debug\net7.0-windows\Data.runtimeconfig.json
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\bin\Debug\net7.0-windows\Data.dll
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\bin\Debug\net7.0-windows\Data.pdb
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\obj\Debug\net7.0-windows\Data.csproj.AssemblyReference.cache
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\obj\Debug\net7.0-windows\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\obj\Debug\net7.0-windows\Data.AssemblyInfoInputs.cache
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\obj\Debug\net7.0-windows\Data.AssemblyInfo.cs
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\obj\Debug\net7.0-windows\Data.csproj.CoreCompileInputs.cache
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\obj\Debug\net7.0-windows\Data.sourcelink.json
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\obj\Debug\net7.0-windows\Data.dll
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\obj\Debug\net7.0-windows\refint\Data.dll
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\obj\Debug\net7.0-windows\Data.pdb
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\obj\Debug\net7.0-windows\Data.genruntimeconfig.cache
+C:\Users\rafae\OneDrive - UTN FRLP\Facultad\2023\Diseño de Sistemas\Trabajo de Campo\Entrega 5\server\Data\obj\Debug\net7.0-windows\ref\Data.dll
