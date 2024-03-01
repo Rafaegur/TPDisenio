@@ -4226,11 +4226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\TPDisenio\\server\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\Data\\Data.csproj",
+      "projectPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\TPDisenio\\server\\Data\\Data.csproj",
       "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\Data\\obj\\",
+      "outputPath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\TPDisenio\\server\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",

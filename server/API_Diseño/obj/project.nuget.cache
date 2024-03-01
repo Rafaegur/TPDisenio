@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R2WGU73bMSowUjzQvu0XgcT2J/tAsZiEEs3ZqQ5YYI0DBgpOrI5c2K/hLBTyXcMtUe4KIkLyw2FmeGGK3rI2FQ==",
+  "dgSpecHash": "GY7QmAUII0lMBMA2nJibiQ7UonUDWyTSt3HQ7n0xFF5GcRgr+f2Ds0Uk/EgdqGdXdhheirezyp8w5+5Yys2c6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\Entrega 5\\TPDisenio\\server\\API_Diseño\\API_Diseño.csproj",
+  "projectFilePath": "C:\\Users\\rafae\\OneDrive - UTN FRLP\\Facultad\\2023\\Diseño de Sistemas\\Trabajo de Campo\\TPDisenio\\server\\API_Diseño\\API_Diseño.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafae\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
