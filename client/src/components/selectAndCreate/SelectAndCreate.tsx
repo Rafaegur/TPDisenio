@@ -13,7 +13,6 @@ export const SelectAndCreate = ({
   onSelect: (args: string) => void;
 }) => {
 
-
   const handleSelect = (e: any) => {
     onSelect(e.target.value);
   }

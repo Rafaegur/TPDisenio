@@ -3,28 +3,26 @@
 import closeSvg from '../../../public/x-symbol-svgrepo-com.svg';
 import newItemSvg from '../../../public/new-svgrepo-com.svg';
 import Image from 'next/image';
+import { Entry } from '@/models/entry.model';
 import { SelectAndCreate } from '@/components/selectAndCreate/SelectAndCreate';
 import { useEffect, useState, useRef } from 'react';
 import { getObrasSociales } from '@/services/obraSocialService';
 import { getOdontologos } from '@/services/odontologoService';
 import { ObraSocial } from '@/models/obraSocial.model';
 import { Odontologo } from '@/models/odontologo.model';
+import { saveLote, ILote } from '@/services/loteService';
+import toast, { Toaster } from 'react-hot-toast';
 
-class Entry {
-  obraSocial: string;
-  cantidad: number;
-  constructor(obraSoc: string, cant: number){
-    this.obraSocial = obraSoc;
-    this.cantidad = cant;
-  }
-}
 
 export default function AltaLote() {
-  const [odontologos, setOdontologos] = useState([]);
-  const [obrasSociales, setObrasSociales] = useState([]);
+  const [odontologos, setOdontologos] = useState<Odontologo[]>([]);
+  const [odontologosArr, setOdontologosArr] = useState<string[]>([])
+  const [obrasSociales, setObrasSociales] = useState<ObraSocial[]>([]);
+  const [obrasSocialesArr, setObrasSocialesArr] = useState<string[]>([]);
+
   const [entries, setEntries] = useState<Entry[]>([]);
-  const [selectedOdontologo, setSelectedOdontologo] = useState<string>('');
-  const [selectedObraSocial, setSelectedObraSocial] = useState<string>('');
+  const [selectedOdontologo, setSelectedOdontologo] = useState<Odontologo>({} as Odontologo);
+  const [selectedObraSocial, setSelectedObraSocial] = useState<ObraSocial>({} as ObraSocial);
   const bonosAmount = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -32,14 +30,12 @@ export default function AltaLote() {
       Promise.all([getObrasSociales(), getOdontologos()]).then((values) => {
         const obras = values[0];
         const odontologos = values[1];
-        const obrasArr = obras.map((obra: ObraSocial) => {
-          return obra.nombre
-        })
-        const odontologosArr = odontologos.map((odontologo: Odontologo) => {
-          return odontologo.nombre
-        })
-        setObrasSociales(obrasArr);
-        setOdontologos(odontologosArr);
+      
+        setObrasSociales(obras);
+        setObrasSocialesArr(obras.map((obra: ObraSocial) => obra.nombre))
+        setOdontologos(odontologos);
+        setOdontologosArr(odontologos.map((odontologo: ObraSocial) => odontologo.nombre))
+
         return values;
       }).catch(() => {
         return {}
@@ -48,8 +44,24 @@ export default function AltaLote() {
     loadData();
   },[])
 
+  const setOdontologo = (nombre: string) => {
+    const selectedOdont = odontologos.find((odontologo: Odontologo) => odontologo.nombre === nombre) || {} as Odontologo;
+    setSelectedOdontologo(selectedOdont);
+  }
+
+  const setObraSocial = (nombre: string) => {
+    const selectedObraSocial = obrasSociales.find((obraSocial: ObraSocial) => obraSocial.nombre === nombre) || {} as ObraSocial;
+    setSelectedObraSocial(selectedObraSocial);
+  }
+
   const handleAddEntry = () => {
     if(bonosAmount.current == null) return;
+    if(entries.find((entry) => {
+      return entry.obraSocial.nombre === selectedObraSocial.nombre
+    }) != null){
+      toast.error("Ya se agrego la obra social.");
+      return;
+    }
     const newEntry = new Entry(selectedObraSocial, Number(bonosAmount.current?.value))
     setEntries([...entries, newEntry])
   }
@@ -60,21 +72,47 @@ export default function AltaLote() {
     }))
   }
 
-  const clearStates = () => {
+  const save = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+
+    // TODO!: Add DTO's in the backend.
+    entries.forEach((entry) => {
+      const lote: ILote = {
+        id: 0,
+        mes: new Date().getMonth() + 1,
+        cantidad: entry.cantidad,
+        odontologoId: selectedOdontologo.id,
+        odontologo: {
+          id: 0,
+          matricula: 0,
+          nombre: '',
+          apellido: '',
+          dni: 0
+        },
+        obraSocialId: entry.obraSocial.id,
+        obraSocial:{
+          id: 0,
+          nombre: '',
+        }
+      }
+      saveLote(lote)
+    })
     setEntries([]);
   }
 
   return (
     <div className='flex w-full h-screen items-center justify-center'>
+      <Toaster />
       <div className='flex flex-col xl:w-1/3 h-full items-center gap-2'>
+        <form onSubmit={save}>
         <h1 className='text-2xl w-full pt-12 font-bold'>Alta Lote</h1>
         <div className='divider bg-white h-[1px]'></div>
         <div className='flex gap-2 w-full'>
           <SelectAndCreate
             newItemImg={newItemSvg}
-            options={odontologos}
+            options={odontologosArr}
             defaultOptionName='Seleccionar odontologo...'
-            onSelect={setSelectedOdontologo}
+            onSelect={setOdontologo}
           ></SelectAndCreate>
         </div>
         <div className='flex gap-4 w-full items-center flex-col xl:flex-row'>
@@ -82,9 +120,9 @@ export default function AltaLote() {
             <label>Obra social</label>
             <SelectAndCreate
               newItemImg={newItemSvg}
-              options={obrasSociales}
+              options={obrasSocialesArr}
               defaultOptionName='Seleccionar obra social...'
-              onSelect={setSelectedObraSocial}
+              onSelect={setObraSocial}
             ></SelectAndCreate>
           </div>
           <div className='flex w-full'>
@@ -93,10 +131,11 @@ export default function AltaLote() {
               <div className='flex gap-2'>
                 <input
                   ref={bonosAmount}
+                  required
                   className='input flex grow w-auto max-w-48'
                   type='number'
                 ></input>
-                <button className='btn' onClick={handleAddEntry}>Agregar</button>
+                <button className='btn' type='button' onClick={handleAddEntry}>Agregar</button>
               </div>
             </div>
           </div>
@@ -119,10 +158,10 @@ export default function AltaLote() {
                 return (
                   <tr key={index}>
                     <td>{index}</td>
-                    <td>{entry.obraSocial}</td>
+                    <td>{entry.obraSocial.nombre}</td>
                     <td>{entry.cantidad}</td>
                     <td className='flex justify-center'>
-                      <button onClick={() => handleRemoveEntry(index)} className='btn btn-sm btn-square btn-neutral'>
+                      <button type='button' onClick={() => handleRemoveEntry(index)} className='btn btn-sm btn-square btn-neutral'>
                         <Image src={closeSvg} width={12} alt='delete'></Image>
                       </button>
                     </td>
@@ -135,8 +174,9 @@ export default function AltaLote() {
 
         <div className='flex flex-row-reverse w-full gap-2'>
           <button className='btn'>Cancelar</button>
-          <button onClick={clearStates} className='btn'>Aceptar</button>
+          <button type='submit' className='btn'>Aceptar</button>
         </div>
+        </form>
       </div>
     </div>
   );
