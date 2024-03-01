@@ -10,12 +10,18 @@ export const SelectAndCreate = ({
   newItemImg: any;
   options: string[];
   defaultOptionName: string;
-  onSelect: () => void;
+  onSelect: (args: string) => void;
 }) => {
+
+
+  const handleSelect = (e: any) => {
+    onSelect(e.target.value);
+  }
+
   return (
     <div className='flex gap-2 w-full min-w-48'>
-      <select onChange={onSelect} className='select w-full'>
-        <option selected value={''}>
+      <select onChange={handleSelect} defaultValue={defaultOptionName} className='select w-full'>
+        <option>
           {defaultOptionName}
         </option>
         {options.map((option: string, key: number) => (

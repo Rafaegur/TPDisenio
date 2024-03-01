@@ -3,4 +3,5 @@ export class ObraSocial {
   constructor(nombre: string) {
     this.nombre = nombre;
   }
+
 }

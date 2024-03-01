@@ -1,28 +1,18 @@
-import React,{ useState, useEffect } from 'react'; 
+
 import { ObraSocial } from '@/models/obraSocial.model';
-import axios from "axios";
+import { API_URL } from '../utils/constants';
 
 export const getObrasSociales = async () => {
-  const response = await fetch('/api/obraSocial');
+  const response = await fetch(`https://localhost:7182/API/ObraSocial/GetObraSociales`);
   const obrasSociales = await response.json();
 
+  console.log('obrasSociales: ', obrasSociales);
+
+  
   const obrasSocialesArray = obrasSociales.map((obraSocial: any) => {
     return new ObraSocial(obraSocial.nombre);
   });
-
+  
   return obrasSocialesArray;
 };
-
-
-
-const API_URL = "https://localhost:7182";
-
-export async function GetMotivos() {
-  try {
-    const response = await axios.get(`${API_URL}/API/ObraSocial/GetObraSociales`);
-    return response.data;
-  } catch (error) {
-    console.error(error);
-  }
-}
 

@@ -4,10 +4,66 @@ import closeSvg from '../../../public/x-symbol-svgrepo-com.svg';
 import newItemSvg from '../../../public/new-svgrepo-com.svg';
 import Image from 'next/image';
 import { SelectAndCreate } from '@/components/selectAndCreate/SelectAndCreate';
+import { useEffect, useState, useRef } from 'react';
+import { getObrasSociales } from '@/services/obraSocialService';
+import { getOdontologos } from '@/services/odontologoService';
+import { ObraSocial } from '@/models/obraSocial.model';
+import { Odontologo } from '@/models/odontologo.model';
 
-
+class Entry {
+  obraSocial: string;
+  cantidad: number;
+  constructor(obraSoc: string, cant: number){
+    this.obraSocial = obraSoc;
+    this.cantidad = cant;
+  }
+}
 
 export default function AltaLote() {
+  const [odontologos, setOdontologos] = useState([]);
+  const [obrasSociales, setObrasSociales] = useState([]);
+  const [entries, setEntries] = useState<Entry[]>([]);
+  const [selectedOdontologo, setSelectedOdontologo] = useState<string>('');
+  const [selectedObraSocial, setSelectedObraSocial] = useState<string>('');
+  const bonosAmount = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const loadData = async () => {
+      Promise.all([getObrasSociales(), getOdontologos()]).then((values) => {
+        const obras = values[0];
+        const odontologos = values[1];
+        const obrasArr = obras.map((obra: ObraSocial) => {
+          return obra.nombre
+        })
+        const odontologosArr = odontologos.map((odontologo: Odontologo) => {
+          return odontologo.nombre
+        })
+        setObrasSociales(obrasArr);
+        setOdontologos(odontologosArr);
+        return values;
+      }).catch(() => {
+        return {}
+      })
+    };
+    loadData();
+  },[])
+
+  const handleAddEntry = () => {
+    if(bonosAmount.current == null) return;
+    const newEntry = new Entry(selectedObraSocial, Number(bonosAmount.current?.value))
+    setEntries([...entries, newEntry])
+  }
+
+  const handleRemoveEntry = (indexToRemove: number) => {
+    setEntries(entries.filter((_: Entry, index: number) => {
+      return index !== indexToRemove;
+    }))
+  }
+
+  const clearStates = () => {
+    setEntries([]);
+  }
+
   return (
     <div className='flex w-full h-screen items-center justify-center'>
       <div className='flex flex-col xl:w-1/3 h-full items-center gap-2'>
@@ -16,9 +72,9 @@ export default function AltaLote() {
         <div className='flex gap-2 w-full'>
           <SelectAndCreate
             newItemImg={newItemSvg}
-            options={['Odontologo 1', 'Odontologo 2', 'Odontologo 3']}
+            options={odontologos}
             defaultOptionName='Seleccionar odontologo...'
-            onSelect={() => {}}
+            onSelect={setSelectedOdontologo}
           ></SelectAndCreate>
         </div>
         <div className='flex gap-4 w-full items-center flex-col xl:flex-row'>
@@ -26,9 +82,9 @@ export default function AltaLote() {
             <label>Obra social</label>
             <SelectAndCreate
               newItemImg={newItemSvg}
-              options={['OSDE', 'Swiss Medical', 'Galeno']}
+              options={obrasSociales}
               defaultOptionName='Seleccionar obra social...'
-              onSelect={() => {}}
+              onSelect={setSelectedObraSocial}
             ></SelectAndCreate>
           </div>
           <div className='flex w-full'>
@@ -36,10 +92,11 @@ export default function AltaLote() {
               <label>Cantidad</label>
               <div className='flex gap-2'>
                 <input
+                  ref={bonosAmount}
                   className='input flex grow w-auto max-w-48'
                   type='number'
                 ></input>
-                <button className='btn'>Agregar</button>
+                <button className='btn' onClick={handleAddEntry}>Agregar</button>
               </div>
             </div>
           </div>
@@ -58,93 +115,27 @@ export default function AltaLote() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>OSDE</td>
-                <td>5</td>
-                <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-neutral'>
-                    <Image src={closeSvg} width={12} alt='delete'></Image>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Swiss Medical</td>
-                <td>3</td>
-                <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-neutral'>
-                    <Image src={closeSvg} width={12} alt='delete'></Image>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Swiss Medical</td>
-                <td>3</td>
-                <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-neutral'>
-                    <Image src={closeSvg} width={12} alt='delete'></Image>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Swiss Medical</td>
-                <td>3</td>
-                <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-neutral'>
-                    <Image src={closeSvg} width={12} alt='delete'></Image>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Swiss Medical</td>
-                <td>3</td>
-                <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-neutral'>
-                    <Image src={closeSvg} width={12} alt='delete'></Image>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Swiss Medical</td>
-                <td>3</td>
-                <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-neutral'>
-                    <Image src={closeSvg} width={12} alt='delete'></Image>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Swiss Medical</td>
-                <td>3</td>
-                <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-neutral'>
-                    <Image src={closeSvg} width={12} alt='delete'></Image>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>Swiss Medical</td>
-                <td>3</td>
-                <td className='flex justify-center'>
-                  <button className='btn btn-sm btn-square btn-neutral'>
-                    <Image src={closeSvg} width={12} alt='delete'></Image>
-                  </button>
-                </td>
-              </tr>
+              {entries.map((entry: Entry, index: number) => {
+                return (
+                  <tr key={index}>
+                    <td>{index}</td>
+                    <td>{entry.obraSocial}</td>
+                    <td>{entry.cantidad}</td>
+                    <td className='flex justify-center'>
+                      <button onClick={() => handleRemoveEntry(index)} className='btn btn-sm btn-square btn-neutral'>
+                        <Image src={closeSvg} width={12} alt='delete'></Image>
+                      </button>
+                    </td>
+                  </tr>
+                )
+              })}
             </tbody>
           </table>
         </div>
 
         <div className='flex flex-row-reverse w-full gap-2'>
           <button className='btn'>Cancelar</button>
-          <button className='btn'>Aceptar</button>
+          <button onClick={clearStates} className='btn'>Aceptar</button>
         </div>
       </div>
     </div>
