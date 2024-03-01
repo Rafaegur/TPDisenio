@@ -5,6 +5,8 @@ import newItemSvg from '../../../public/new-svgrepo-com.svg';
 import Image from 'next/image';
 import { SelectAndCreate } from '@/components/selectAndCreate/SelectAndCreate';
 
+
+
 export default function AltaLote() {
   return (
     <div className='flex w-full h-screen items-center justify-center'>
