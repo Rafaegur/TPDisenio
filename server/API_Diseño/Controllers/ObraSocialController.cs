@@ -49,13 +49,6 @@ namespace API_Diseño.Controllers
             return Ok(obraSocial);
         }
 
-        [HttpGet("GetOdontologoes", Name = "GetOdontologoes")]
-        public async Task<ActionResult> GetOdontologoes()
-        {
-            List<Odontologo> odontologo = await context.Odontologo.ToListAsync();
-            return Ok(odontologo);
-        }
-
         [HttpPut("PutObraSocial", Name = "PutObraSocial")]
         public ActionResult Put(int id, [FromBody] ObraSocial ObraSocialActualizada)
         {

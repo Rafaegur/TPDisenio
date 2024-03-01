@@ -21,7 +21,7 @@ namespace API_Diseño.Controllers
             this.context = context;
         }
         // POST api/<ValuesController>
-        [HttpPost("PostOdontologoes", Name = "PostOdontologoes")]
+        [HttpPost("PostOdontologos", Name = "PostOdontologos")]
         public ActionResult Post([FromBody] Odontologo odontologo)
         {
             try
@@ -34,7 +34,7 @@ namespace API_Diseño.Controllers
                 context.Odontologo.Add(odontologo);
                 context.SaveChanges();
 
-                return CreatedAtRoute("GetOdontologoes", new { id = odontologo.Id }, odontologo);
+                return CreatedAtRoute("GetOdontologos", new { id = odontologo.Id }, odontologo);
             }
             catch (Exception ex)
             {
@@ -42,8 +42,8 @@ namespace API_Diseño.Controllers
             }
         }
         // GET: api/<ValuesController>
-        [HttpGet("GetOdontologoes", Name = "GetOdontologoes")]
-        public async Task<ActionResult> GetOdontologoes()
+        [HttpGet("GetOdontologos", Name = "GetOdontologo")]
+        public async Task<ActionResult> GetOdontologos()
         {
             List<Odontologo> odontologo = await context.Odontologo.ToListAsync();
             return Ok(odontologo);

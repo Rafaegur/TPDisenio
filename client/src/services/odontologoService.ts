@@ -1,7 +1,7 @@
 import { Odontologo } from '@/models/odontologo.model';
 
 export const getOdontologos = async () => {
-  const response = await fetch('https://localhost:7182/API/Odontologo/GetOdontologoes');
+  const response = await fetch('https://localhost:7182/API/Odontologo/GetOdontologos');
   const odontologos = await response.json();
 
   const odontologosArray = odontologos.map((odontologo: any) => {
